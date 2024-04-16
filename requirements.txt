@@ -1,0 +1,6 @@
+Flask==2.3.3
+Flask-Cors
+gunicorn==21.2.0
+Werkzeug==3.0.1
+selenium==4.17.2
+chromedriver-autoinstaller

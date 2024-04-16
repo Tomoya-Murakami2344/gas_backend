@@ -1,0 +1,13 @@
+FROM python:3.11
+
+RUN apt-get update && \
+apt-get install -y --no-install-recommends unzip && \
+rm -rf /var/lib/apt/lists/*
+# build-essential \
+# wget \
+
+RUN pip install --upgrade pip                
+COPY ./requirements.txt /requirements.txt    
+RUN pip install -r /requirements.txt
+WORKDIR /work
+CMD ["/bin/bash"] 
